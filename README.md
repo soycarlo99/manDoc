@@ -1,3 +1,4 @@
+# visit the page at: https://soycarlo99.github.io/manDoc/
 # manDoc
 
 Welcome to **manDoc** – a collection of documentation and manuals for programming languages and tools! We noticed that there wasn't a single website aggregating all the essential documentation links in one place, so we decided to build one. 
