@@ -31,7 +31,7 @@ We appreciate any feedback or suggestions! Feel free to open issues or contribut
 
 ## Core Maintainers
 
-We are passionate about building and improving **manDoc**! If you have any questions or suggestions, feel free to reach out to us directly:
+**manDoc**! If you have any questions or suggestions, feel free to reach out to us directly:
 
 - [Carlo](https://github.com/soycarlo99)
 - [Damien](https://github.com/Damienbruh)
