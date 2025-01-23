@@ -6,6 +6,9 @@ import "./App.css";
 function App() {
   return (
     <div className="app-container">
+      <div className="infinity-container">
+        <div className="infinity"></div>
+      </div>
       <h1 className="app-title">mandoc</h1>
       <h2>
         Collection of all documentations and manuals for programming languages
