@@ -1,7 +1,7 @@
 import React from "react";
 import { docsList } from "./docsData";
 import "./App.css";
-import favicon from "./assets/manDoc.png";
+//import favicon from "../public/manDoc.png";
 
 function App() {
   return (
