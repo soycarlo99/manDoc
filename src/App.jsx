@@ -8,6 +8,7 @@ function App() {
       <div className="infinity-container">
         <div className="infinity"></div>
       </div>
+
       <h1 className="app-title">mandoc</h1>
       <h2>
         Collection of all documentations and manuals for programming languages
@@ -24,6 +25,7 @@ function App() {
           <i className="devicon-github-original colored github-icon" />
         </a>
       </h3>
+
       <ul className="docs-grid">
         {docsList.map((doc) => (
           <li key={doc.name} className="docs-item">
@@ -36,11 +38,21 @@ function App() {
               <i className={`devicon-${doc.deviconClass} colored docs-icon`} />
               <span className="docs-text">{doc.name}</span>
             </a>
+
             <ul className="docs-extension">
-              <a href="#" className="extension-link">Quick Start Guide</a>
-              <a href="#" className="extension-link">API Reference</a>
-              <a href="#" className="extension-link">Tutorials</a>
-              <a href="#" className="extension-link">Community Forums</a>
+              {doc.resources &&
+                doc.resources.map((resource, index) => (
+                  <li key={index}>
+                    <a
+                      href={resource.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="extension-link"
+                    >
+                      {resource.label}
+                    </a>
+                  </li>
+                ))}
             </ul>
           </li>
         ))}

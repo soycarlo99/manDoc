@@ -126,6 +126,7 @@ h3 {
   transition: all 0.3s ease;
   z-index: 2;
   pointer-events: none;
+  list-style-type: none;
 }
 
 .docs-item:hover .docs-extension {
@@ -134,7 +135,6 @@ h3 {
   pointer-events: auto;
   margin: auto;
   padding: auto;
-  
 }
 
 .extension-link {
