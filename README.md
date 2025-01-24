@@ -17,10 +17,20 @@ To add a new documentation entry, use the following template:
 
 ```js
 {
-  name: 'Your Language/Tool Name',
-  deviconClass: 'appropriate-devicon-class',
-  url: 'https://link-to-the-documentation',
-},
+  name: "Your Language/Tool Name",
+  deviconClass: "appropriate-devicon-class",
+  url: "https://link-to-the-primary-documentation",
+  resources: [
+    {
+      label: "Some Resource Label",
+      url: "https://some-resource-url"
+    },
+    {
+      label: "Another Resource Label",
+      url: "https://another-resource-url"
+    }
+  ]
+}
 ```
 
 Place your new entry in the `docsList` array inside the `docsData.js` file. Make sure to follow the existing format to maintain consistency.
