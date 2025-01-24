@@ -1,7 +1,6 @@
 import React from "react";
 import { docsList } from "./docsData";
 import "./App.css";
-//import favicon from "../public/manDoc.png";
 
 function App() {
   return (
@@ -25,7 +24,7 @@ function App() {
           <i className="devicon-github-original colored github-icon" />
         </a>
       </h3>
-      <ul className="docs-list">
+      <ul className="docs-grid">
         {docsList.map((doc) => (
           <li key={doc.name} className="docs-item">
             <a
@@ -37,6 +36,12 @@ function App() {
               <i className={`devicon-${doc.deviconClass} colored docs-icon`} />
               <span className="docs-text">{doc.name}</span>
             </a>
+            <ul className="docs-extension">
+              <a href="#" className="extension-link">Quick Start Guide</a>
+              <a href="#" className="extension-link">API Reference</a>
+              <a href="#" className="extension-link">Tutorials</a>
+              <a href="#" className="extension-link">Community Forums</a>
+            </ul>
           </li>
         ))}
       </ul>
