@@ -1,8 +1,43 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { docsList } from "./docsData";
 import "./App.css";
 
 function App() {
+  useEffect(() => {
+    const handleWordHover = (event) => {
+      const word = event.currentTarget;
+      word.classList.add("hovered");
+      setTimeout(() => {
+        word.classList.remove("hovered");
+      }, 750);
+    };
+
+    const setRandomTranslate = () => {
+      const letters = document.querySelectorAll(".hover-letter");
+      letters.forEach((letter) => {
+        const randomX = Math.floor(Math.random() * 20) - 10;
+        const randomY = Math.floor(Math.random() * 20) - 10;
+        letter.style.setProperty("--random-x", `${randomX}px`);
+        letter.style.setProperty("--random-y", `${randomY}px`);
+      });
+    };
+
+    const words = document.querySelectorAll(".hover-word");
+    words.forEach((word) => {
+      word.addEventListener("mouseleave", handleWordHover);
+      word.addEventListener("mouseenter", setRandomTranslate);
+    });
+
+    setRandomTranslate();
+
+    return () => {
+      words.forEach((word) => {
+        word.removeEventListener("mouseleave", handleWordHover);
+        word.removeEventListener("mouseenter", setRandomTranslate);
+      });
+    };
+  }, []);
+
   return (
     <div className="app-container">
       <div className="infinity-container">
@@ -10,10 +45,32 @@ function App() {
       </div>
 
       <h1 className="app-title">mandoc</h1>
-      <h2>
-        Collection of all documentations and manuals for programming languages
-        and tools
+
+      <h2 className="animated-heading">
+        {[
+          "Collection",
+          "of",
+          "all",
+          "documentations",
+          "and",
+          "manuals",
+          "for",
+          "programming",
+          "languages",
+          "and",
+          "tools",
+        ].map((word, index) => (
+          <span key={index} className="hover-word">
+            {word.split("").map((char, charIndex) => (
+              <span key={charIndex} className="hover-letter">
+                {char}
+              </span>
+            ))}
+            {index < 10 && " "}
+          </span>
+        ))}
       </h2>
+
       <h3>
         Did we miss something? Let us know on GitHub &gt;
         <a
