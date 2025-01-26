@@ -417,4 +417,46 @@ export const docsList = [
       },
     ],
   },
+  {
+    name: "Git",
+    deviconClass: "git-plain",
+    url: "https://git-scm.com/docs",
+    resources: [
+      {
+        label: "Atlassian Git Tutorials",
+        url: "https://www.atlassian.com/git",
+      },
+      {
+        label: "Udemy Git",
+        url: "https://www.udemy.com/topic/git/",
+      },
+      {
+        label: "Coursera Git",
+        url: "https://www.coursera.org/search?query=git",
+      },
+    ],
+  },
+  {
+    name: "GitHub",
+    deviconClass: "github-original",
+    url: "https://docs.github.com",
+    resources: [
+      {
+        label: "Official GitHub Docs",
+        url: "https://docs.github.com",
+      },
+      {
+        label: "GitHub Guides",
+        url: "https://guides.github.com",
+      },
+      {
+        label: "Udemy GitHub",
+        url: "https://www.udemy.com/topic/github/",
+      },
+      {
+        label: "Coursera GitHub",
+        url: "https://www.coursera.org/search?query=github",
+      },
+    ],
+  },
 ];
