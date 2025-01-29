@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Italiana&family=Noto+Emoji:wght@300..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Share+Tech+Mono&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Italiana&family=Major+Mono+Display&family=Noto+Emoji:wght@300..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Share+Tech+Mono&display=swap");
 
-/* Test Global Styles */
+/* Global Styles */
 body {
   margin: 0;
   padding: 0;
@@ -140,6 +140,7 @@ body {
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   width: 100%;
+  padding-left: 0px;
   max-width: 1200px;
   animation: slideUp 1s ease-out;
   position: relative;
